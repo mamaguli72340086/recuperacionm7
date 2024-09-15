@@ -13,11 +13,12 @@ const MainPage = () => {
 
   return (
     <div className="main-page">
-      <h1>Traductor USIP</h1>
-      <button onClick={() => setActiveModal('add')}>Agregar Palabra</button>
-      <button onClick={() => setActiveModal('delete')}>Eliminar Palabra</button>
-      <button onClick={() => setActiveModal('translate')}>Traducir</button>
-
+      <h1 class="titulo">Traductor USIP</h1>
+      <div class="boton">
+        <button onClick={() => setActiveModal('add')}>Agregar Palabra</button>
+        <button onClick={() => setActiveModal('delete')}>Eliminar Palabra</button>
+        <button onClick={() => setActiveModal('translate')}>Traducir</button>
+      </div>
       {activeModal === 'add' && <AddWordModal onClose={closeModal} />}
       {activeModal === 'delete' && <DeleteWordModal onClose={closeModal} />}
       {activeModal === 'translate' && <TranslateWordModal onClose={closeModal} />}

@@ -1,6 +1,7 @@
 // src/components/TranslateWordModal.jsx
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
+import "../App.css"; 
 
 const TranslateWordModal = ({ onClose }) => {
   const [word, setWord] = useState('');
@@ -24,19 +25,30 @@ const TranslateWordModal = ({ onClose }) => {
 
   return (
     <div className="modal">
-      <h2>Traductor USIP</h2>
+      <h2 className='titulo'>Traducir Palabra</h2>
+      <form action="" class="form">
       <p>Que palabra desea traducir en el diccionario. Agregue su palabra y después el idioma de traducción.</p>
-      <label>Palabra a traducir</label>
-      <input type="text" value={word} onChange={(e) => setWord(e.target.value)} />
-      <label>Idioma de traduccion</label>
-      <select value={language} onChange={(e) => setLanguage(e.target.value)}>
-        <option value="es">Español</option>
-        <option value="en">Inglés</option>
-        <option value="pt">Portugués</option>
-      </select>
-      <textarea readOnly value={translation}></textarea>
-      <button type="button" onClick={handleTranslate}>Traducir</button>
-      <button type="button" onClick={onClose}>Cerrar</button>
+      <div class="entrada">
+        <label>Palabra a traducir</label>
+        <input type="text" value={word} onChange={(e) => setWord(e.target.value)} />
+      </div>
+      <div class="entrada">
+        <label>Idioma de traduccion</label>
+        <select value={language} onChange={(e) => setLanguage(e.target.value)}>
+          <option value="es">Español</option>
+          <option value="en">Inglés</option>
+          <option value="pt">Portugués</option>
+        </select>
+      </div>
+      <div class="entrada">
+        <label htmlFor="">Traduccion</label>
+        <textarea readOnly value={translation}></textarea>
+      </div>
+      <div class="boton">
+        <button type="button" onClick={handleTranslate}>Traducir</button>
+        <button type="button" onClick={onClose}>Cerrar</button>
+      </div>
+      </form>
     </div>
   );
 };
