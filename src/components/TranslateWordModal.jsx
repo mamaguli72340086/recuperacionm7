@@ -1,4 +1,3 @@
-// src/components/TranslateWordModal.jsx
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import "../App.css"; 
@@ -25,7 +24,7 @@ const TranslateWordModal = ({ onClose }) => {
 
   return (
     <div className="modal">
-      <h2 className='titulo'>Traducir Palabra</h2>
+      
       <form action="" class="form">
       <p>Que palabra desea traducir en el diccionario. Agregue su palabra y después el idioma de traducción.</p>
       <div class="entrada">
@@ -45,8 +44,8 @@ const TranslateWordModal = ({ onClose }) => {
         <textarea readOnly value={translation}></textarea>
       </div>
       <div class="boton">
-        <button type="button" onClick={handleTranslate}>Traducir</button>
-        <button type="button" onClick={onClose}>Cerrar</button>
+        <button class="" type="button" onClick={handleTranslate}>Traducir</button>
+        <button class="" type="button" onClick={onClose}>Cerrar</button>
       </div>
       </form>
     </div>

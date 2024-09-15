@@ -1,4 +1,3 @@
-// src/components/DeleteWordModal.jsx
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { deleteWord } from '../redux/slices/dictionarySlice';
@@ -21,7 +20,7 @@ const DeleteWordModal = ({ onClose }) => {
 
   return (
     <div className="modal">
-      <h2 className='titulo'>Eliminar Palabra</h2>
+      
       <form class="form">
       <p className='parrafo'>Que palabra desea eliminar del diccionario. Puede escribir su palabra en español, inglés o portugués.</p>
       <div class='entrada'>
@@ -34,8 +33,8 @@ const DeleteWordModal = ({ onClose }) => {
         />
       </div>
       <div className='boton'>
-        <button type="button" onClick={handleDelete}>Eliminar</button>
-        <button type="button" onClick={onClose}>Cerrar</button>
+        <button class="" type="button" onClick={handleDelete}>Eliminar</button>
+        <button class="" type="button" onClick={onClose}>Cerrar</button>
       </div>
       </form>
     </div>

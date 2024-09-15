@@ -1,4 +1,3 @@
-// src/routes/MainPage.jsx
 import React, { useState } from 'react';
 import AddWordModal from '../../components/AddWordModal';
 import DeleteWordModal from '../../components/DeleteWordModal';

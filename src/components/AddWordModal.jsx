@@ -1,4 +1,3 @@
-// src/components/AddWordModal.jsx
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addWord } from '../redux/slices/dictionarySlice';
@@ -17,7 +16,7 @@ const AddWordModal = ({ onClose }) => {
 
   return (
     <div className="modal">
-      <h2 class="titulo">Agregar Palabra</h2>
+      
       <form class="form">
         <div class="entrada">
           <label>Español</label>
@@ -32,8 +31,8 @@ const AddWordModal = ({ onClose }) => {
           <input type="text" value={pt} onChange={(e) => setPt(e.target.value)} />
         </div>
         <div className="boton">
-          <button type="button" onClick={handleAdd}>Agregar</button>
-          <button type="button" onClick={onClose}>Cerrar</button>
+          <button class="" type="button" onClick={handleAdd}>Agregar</button>
+          <button class="" type="button" onClick={onClose}>Cerrar</button>
         </div>
       </form>
     </div>
